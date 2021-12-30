@@ -10,7 +10,7 @@ public class Queen {
             soldiers[i].sendIntoBattle();
         }
         for (int i = 0; i < workers.length; i++) {
-            soldiers[i].sendIntoFood;
+            soldiers[i].sendIntoFood();
         }
         }
     public static void populate(){
