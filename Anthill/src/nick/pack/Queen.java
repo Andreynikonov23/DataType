@@ -12,7 +12,7 @@ public class Queen {
         for (int i = 0; i < workers.length; i++) {
             soldiers[i].sendIntoFood();
         }
-        }
+    }
     public static void populate(){
         workers = new Worker[800];
         for (int i = 0; i < workers.length; i++) {
