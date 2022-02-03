@@ -1,0 +1,48 @@
+package nick.pack;
+
+
+public class Main {
+    public static void main(String[] args) {
+        int byt = 5;
+        int sh = 32767;
+        long in = 2_000_000_000;
+        System.out.println(isByte(byt));
+        System.out.println(isShort(sh));
+        System.out.println(isInt(in));
+    }
+    public static byte isByte(int a){
+        byte b = 0;
+        if (a < 127 && a > -128){
+            System.out.println("Число останется целым");
+            b = (byte) a;
+        } else {
+            System.out.println("Число обрежется");
+            b = (byte) a;
+        }
+        return b;
+    }
+    public static short isShort(int num){
+        short s = 0;
+        if (num < 32767 && num > -32768){
+            System.out.println("Число останется целым");
+            s = (short) num;
+        } else {
+            System.out.println("Число обрежется");
+            s = (short) num;
+        }
+        return s;
+    }
+    public static int isInt(long num){
+        int i = 0;
+        if (num < 2_147_483_647 && num > -2147483648){
+            System.out.println("Число останется целым");
+            i = (short) num;
+        } else {
+            System.out.println("Число обрежется");
+            i = (short) num;
+        }
+        return i;
+    }
+}
+
+
