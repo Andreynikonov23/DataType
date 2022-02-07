@@ -1,0 +1,49 @@
+package nick.pack;
+
+import java.util.Scanner;
+
+public class Main {
+    /*
+    Реализуй метод toCustomString,
+    чтобы он преобразовывал Number к String по
+    определенному правилу в зависимости от типа:
+        - если аргумент является объектом Byte,
+          то разделить его на 2 и преобразовать в строку, добавив в конце букву "b";
+        - если аргумент является объектом Integer,
+          то разделить его на 3 и преобразовать в строку;
+        - если аргумент является объектом Double,
+          то умножить его на 20 и преобразовать в строку;
+        - если аргумент не относится ни к одному из вышеперечисленных типов,
+          то вернуть строку "Я такого типа числа не жду!".
+
+    Класс Number является родителем классов Byte, Double, Float, Integer, Long и Short.
+    Для определения типа используй оператор instanceof.
+     */
+    public static void main(String[] args) {
+        byte a = 12;
+        short b = 123;
+        int c = 1000;
+        double d = 14.5;
+        float f = 11.8f;
+        System.out.println(toCustomString(a));
+        System.out.println(toCustomString(b));
+        System.out.println(toCustomString(c));
+        System.out.println(toCustomString(d));
+        System.out.println(toCustomString(f));
+    }
+    public static String toCustomString(Number number){
+        String str = null;
+        if (number instanceof Byte){
+            number = (byte) number / 2;
+            str = number + "b";
+        } else if (number instanceof Integer){
+            number = (int) number / 3;
+            str = number.toString();
+        } else if (number instanceof Double){
+            number = (double) number * 20;
+            str = number.toString();
+        } else
+            str = "Я такого объекта не жду!";
+        return str;
+    }
+}
