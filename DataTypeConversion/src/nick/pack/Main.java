@@ -8,6 +8,7 @@ public class Main {
         System.out.println("Задание №3: " + task3());
         System.out.println("Задание №4: " + task4());
         System.out.println("Задание №5: " + task5());
+        System.out.println("Задание №6: " + task6());
     }
     public static long task1(){
         /*Расставьте правильно операторы приведения типа,
@@ -60,5 +61,16 @@ public class Main {
         int b = 300;
         short c = (short) (b - a);
         return c;
+    }
+    public static double task6(){
+        /*
+        Добавить одну операцию по преобразованию типа,
+        чтобы получался ответ: d=2.941.
+        Пример вывода: 2.9411764705882355
+         */
+        int a = 50;
+        int b = 17;
+        double d =(double) a / b;
+        return d;
     }
 }
